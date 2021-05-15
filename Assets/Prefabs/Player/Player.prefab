@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7214953967266689212}
   - component: {fileID: 7214953967266689203}
   - component: {fileID: 7214953967266689213}
+  - component: {fileID: 7508043596491457993}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -131,7 +132,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.45
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -148,13 +149,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLookCameraTransform: {fileID: 7214953967250953839}
-  HorizontalLookSensitivity: 100
+  HorizontalLookSensitivity: 120
   VerticalLookSensitivity: 100
   TopMaxVerticalLookAngles: 90
-  BottomMinVerticalLookAngles: -70
+  BottomMinVerticalLookAngles: -80
   InvertVerticalLook: 0
   HorizontalAxisName: Mouse X
   VerticalAxisName: Mouse Y
+--- !u!114 &7508043596491457993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214953967266689202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259e748bb43284842b89faa7b1e16df1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizontalSpeed: 5
+  VerticalSpeed: 6
+  HorizontalAxisName: Horizontal
+  VerticalAxisName: Vertical
 --- !u!1 &7214953968544538581
 GameObject:
   m_ObjectHideFlags: 0
