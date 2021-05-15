@@ -18,10 +18,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movePosition = Vector3.zero;
 
     private CharacterController cachedLocalCharacterController;
+    private Transform cachedLocalTransform;
 
     private void Awake()
     {
         cachedLocalCharacterController = this.GetComponent<CharacterController>();
+        cachedLocalTransform = this.GetComponent<Transform>();
     }
 
     private void Update()
@@ -29,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         currentFrameHorizontalAxisValue = Input.GetAxis(HorizontalAxisName) * Time.deltaTime * HorizontalSpeed;
         currentFrameVerticalAxisValue = Input.GetAxis(VerticalAxisName) * Time.deltaTime * VerticalSpeed;
 
-        movePosition = (transform.right * currentFrameHorizontalAxisValue) + (transform.forward * currentFrameVerticalAxisValue);
+        movePosition = (cachedLocalTransform.right * currentFrameHorizontalAxisValue) + (cachedLocalTransform.forward * currentFrameVerticalAxisValue);
 
         cachedLocalCharacterController.Move(movePosition);
     }
