@@ -95,10 +95,9 @@ GameObject:
   - component: {fileID: 7214953967266689203}
   - component: {fileID: 7214953967266689213}
   - component: {fileID: 7508043596491457993}
-  - component: {fileID: 2358332704116956483}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,9 +130,9 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.45
+  m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -150,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLookCameraTransform: {fileID: 7214953967250953839}
-  HorizontalLookSensitivity: 120
-  VerticalLookSensitivity: 100
+  HorizontalLookSensitivity: 150
+  VerticalLookSensitivity: 120
   TopMaxVerticalLookAngles: 90
   BottomMinVerticalLookAngles: -80
   InvertVerticalLook: 0
@@ -171,20 +170,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalSpeed: 5
   VerticalSpeed: 6
+  GravityAcceleration: -15
+  JumpSpeed: 2
+  JumpAttenuationFactor: 0.0027
+  GroundDistanceCheck: 1.1
+  CeilingDistanceCheck: 1.1
+  JumpButtonName: Jump
   HorizontalAxisName: Horizontal
   VerticalAxisName: Vertical
---- !u!114 &2358332704116956483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214953967266689202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d5f54d900fa3477c97604bcb787b0df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7214953968544538581
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +226,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7214953968544538581}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

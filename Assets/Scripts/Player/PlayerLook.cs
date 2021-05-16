@@ -4,8 +4,8 @@ public class PlayerLook : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private Transform PlayerLookCameraTransform;
-    [SerializeField] private float HorizontalLookSensitivity = 120.0f;
-    [SerializeField] private float VerticalLookSensitivity = 100.0f;
+    [SerializeField] private float HorizontalLookSensitivity = 150.0f;
+    [SerializeField] private float VerticalLookSensitivity = 120.0f;
     [SerializeField] private float TopMaxVerticalLookAngles = 90.0f;
     [SerializeField] private float BottomMinVerticalLookAngles = -80.0f;
     [SerializeField] private bool InvertVerticalLook = false;
