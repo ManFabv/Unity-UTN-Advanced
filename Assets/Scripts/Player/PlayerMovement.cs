@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerAnimatorController))]
 public class PlayerMovement : MonoBehaviour
 {
 #pragma warning disable 0649
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController cachedLocalCharacterController;
     private Transform cachedLocalTransform;
+    private PlayerAnimatorController cachedAnimatorController;
 
     private bool isTouchingGround = true;
     private bool isTouchingCeiling = false;
@@ -34,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         cachedLocalCharacterController = this.GetComponent<CharacterController>();
         cachedLocalTransform = this.GetComponent<Transform>();
+        cachedAnimatorController = this.GetComponent<PlayerAnimatorController>();
     }
 
     private void Update()
@@ -56,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         currentFrameVerticalAxisValue = Input.GetAxis(VerticalAxisName) * Time.deltaTime * VerticalSpeed;
 
         movePosition = (cachedLocalTransform.right * currentFrameHorizontalAxisValue) + (cachedLocalTransform.forward * currentFrameVerticalAxisValue);
+
+        cachedAnimatorController.SetMoveAnimation(movePosition, isTouchingGround);
     }
     
     private void ProcessJump()
