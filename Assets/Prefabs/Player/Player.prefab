@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7214953967266689213}
   - component: {fileID: 7508043596491457993}
   - component: {fileID: 258350968743049981}
+  - component: {fileID: 8941280478871486953}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -172,7 +173,7 @@ MonoBehaviour:
   HorizontalSpeed: 5
   VerticalSpeed: 6
   GravityAcceleration: -15
-  JumpSpeed: 4
+  JumpSpeed: 6
   JumpAttenuationFactor: 0.0027
   GroundDistanceCheck: 1.1
   CeilingDistanceCheck: 1.1
@@ -192,7 +193,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkAnimationParameterName: Walk
+  FireAnimationParameterName: Fire
   PlayerAnimator: {fileID: 6842735064886895477}
+--- !u!114 &8941280478871486953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214953967266689202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e541a34e42ec4fa5ab15083bda1d8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePrimaryButtonName: Fire1
 --- !u!1001 &8414498572705683441
 PrefabInstance:
   m_ObjectHideFlags: 0

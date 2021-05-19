@@ -4,6 +4,9 @@ public class PlayerAnimatorController : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private string WalkAnimationParameterName = "Walk";
+    [SerializeField] private string FireAnimationParameterName = "Fire";
+    [SerializeField] private string AimAnimationParameterName = "Aim";
+    
     [SerializeField] private Animator PlayerAnimator;
 #pragma warning restore 0649
 
@@ -18,5 +21,15 @@ public class PlayerAnimatorController : MonoBehaviour
         }
         else
             PlayerAnimator.SetBool(WalkAnimationParameterName, false);
+    }
+
+    public void SetFireAnimation(bool isFiring)
+    {
+        PlayerAnimator.SetBool(FireAnimationParameterName, isFiring);
+    }
+
+    public void SetAimAnimation(bool isAiming)
+    {
+        PlayerAnimator.SetBool(AimAnimationParameterName, isAiming);
     }
 }
