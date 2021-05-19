@@ -173,7 +173,7 @@ MonoBehaviour:
   HorizontalSpeed: 5
   VerticalSpeed: 6
   GravityAcceleration: -15
-  JumpSpeed: 6
+  JumpSpeed: 7
   JumpAttenuationFactor: 0.0027
   GroundDistanceCheck: 1.1
   CeilingDistanceCheck: 1.1
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkAnimationParameterName: Walk
   FireAnimationParameterName: Fire
+  AimAnimationParameterName: Aim
   PlayerAnimator: {fileID: 6842735064886895477}
 --- !u!114 &8941280478871486953
 MonoBehaviour:
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePrimaryButtonName: Fire1
+  AimButtonName: Fire2
 --- !u!1001 &8414498572705683441
 PrefabInstance:
   m_ObjectHideFlags: 0
