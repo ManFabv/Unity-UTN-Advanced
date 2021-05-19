@@ -173,7 +173,7 @@ MonoBehaviour:
   HorizontalSpeed: 5
   VerticalSpeed: 6
   GravityAcceleration: -15
-  JumpSpeed: 7
+  JumpSpeed: 5
   JumpAttenuationFactor: 0.0027
   GroundDistanceCheck: 1.1
   CeilingDistanceCheck: 1.1
