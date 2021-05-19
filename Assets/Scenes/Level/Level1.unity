@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 4d293fc56f5f046ffa6166b11717ff3a, type: 2}
 --- !u!108 &47015594 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 746582483, guid: 22b554f6f87c449e29c05281cefcd1dc,
