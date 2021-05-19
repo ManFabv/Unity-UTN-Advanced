@@ -12,7 +12,7 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void SetMoveAnimation(Vector3 movePosition, bool isGrounded)
     {
-        if(isGrounded)
+        if (isGrounded)
         {
             if (movePosition.x != 0 || movePosition.z != 0)
                 PlayerAnimator.SetBool(WalkAnimationParameterName, true);
