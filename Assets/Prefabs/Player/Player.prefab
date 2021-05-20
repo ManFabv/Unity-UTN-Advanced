@@ -199,6 +199,7 @@ MonoBehaviour:
   FireAnimationParameterName: Fire
   AimAnimationParameterName: Aim
   IdleAnimationParameterName: Idle
+  DeatheAnimationParameterName: Death
   PlayerAnimator: {fileID: 6842735064886895477}
 --- !u!114 &8941280478871486953
 MonoBehaviour:

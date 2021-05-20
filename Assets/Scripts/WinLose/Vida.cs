@@ -44,10 +44,11 @@ public class Vida : MonoBehaviour
 
     private IEnumerator DelayedDestroy()
     {
-        DisableAllMeshRenderers();
-        DisableAllSkinnedMeshRenderers();
         StopAllParticleSystems();
         DisableAllColliders();
+        yield return new WaitForSeconds(2);
+        DisableAllMeshRenderers();
+        DisableAllSkinnedMeshRenderers();
         yield return new WaitForSeconds(0.75f);
         Destroy(this.gameObject);
     }

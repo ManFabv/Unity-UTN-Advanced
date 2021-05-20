@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Vida))]
+[RequireComponent(typeof(PlayerAnimatorController))]
 public class PlayerHealth : MonoBehaviour
 {
 #pragma warning disable 0649
@@ -12,9 +13,11 @@ public class PlayerHealth : MonoBehaviour
 #pragma warning restore 0649
 
     private Vida cachedVida;
+    private PlayerAnimatorController PlayerAnimatorController;
 
     private void Awake()
     {
+        PlayerAnimatorController = this.GetComponent<PlayerAnimatorController>();
         cachedVida = this.GetComponent<Vida>();
         
         if (healthBarGradient == null)
@@ -45,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
     public void Murio()
     {
         GameManager?.OnJugadorMurio();
+        PlayerAnimatorController.SetPlayerDead();
     }
 
     public void TakeDamage()

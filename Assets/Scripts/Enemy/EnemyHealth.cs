@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(EnemyAnimationController))]
 public class EnemyHealth : MonoBehaviour
 {
     private EnemyManager EnemyManager;
+    private EnemyAnimationController EnemyAnimationController;
+
+    private void Awake()
+    {
+        EnemyAnimationController = this.GetComponent<EnemyAnimationController>();
+    }
 
     public void SetEnemyManager(EnemyManager enemyManager)
     {
@@ -15,5 +22,6 @@ public class EnemyHealth : MonoBehaviour
     public void Murio()
     {
         EnemyManager?.EnemigoMurio();
+        EnemyAnimationController.SetEnemyDead();
     }
 }

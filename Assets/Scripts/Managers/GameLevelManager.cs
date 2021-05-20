@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameLevelManager : MonoBehaviour
@@ -89,6 +90,8 @@ public class GameLevelManager : MonoBehaviour
         DisableObjectsOfType<PlayerLook>();
         DisableObjectsOfType<PlayerAnimatorController>();
         DisableObjectsOfType<PlayerShoot>();
+        DisableObjectsOfType<EnemyMovement>();
+        DisableObjectsOfType<EnemyAnimationController>();
     }
 
     private void DisableObjectsOfType<T>() where T : MonoBehaviour

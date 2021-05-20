@@ -8,6 +8,7 @@ public class PlayerAnimatorController : MonoBehaviour
     [SerializeField] private string FireAnimationParameterName = "Fire";
     [SerializeField] private string AimAnimationParameterName = "Aim";
     [SerializeField] private string IdleAnimationParameterName = "Idle";
+    [SerializeField] private string DeatheAnimationParameterName = "Death";
     
     [SerializeField] private Animator PlayerAnimator;
 #pragma warning restore 0649
@@ -38,5 +39,10 @@ public class PlayerAnimatorController : MonoBehaviour
     private void OnDisable()
     {
         PlayerAnimator.SetBool(IdleAnimationParameterName, true);
+    }
+    
+    public void SetPlayerDead()
+    {
+        PlayerAnimator.SetTrigger(DeatheAnimationParameterName);
     }
 }
