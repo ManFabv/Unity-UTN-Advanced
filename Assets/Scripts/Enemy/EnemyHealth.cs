@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(EnemyAnimationController))]
 public class EnemyHealth : MonoBehaviour

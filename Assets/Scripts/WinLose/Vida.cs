@@ -24,11 +24,11 @@ public class Vida : MonoBehaviour
         MaxLife = vida;
         if(cachedDamageAudioSource == null)
             cachedDamageAudioSource = this.GetComponent<AudioSource>();
-        MeshRenderers = this.GetComponentsInChildren<MeshRenderer>();
-        SkinnedMeshRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
-        ParticleSystems = this.GetComponentsInChildren<ParticleSystem>();
+        MeshRenderers = this.GetComponentsInChildren<MeshRenderer>(true);
+        SkinnedMeshRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>(true);
+        ParticleSystems = this.GetComponentsInChildren<ParticleSystem>(true);
 
-        cachedColliders = this.GetComponentsInChildren<Collider>();
+        cachedColliders = this.GetComponentsInChildren<Collider>(true);
     }
 
     private void Update()
