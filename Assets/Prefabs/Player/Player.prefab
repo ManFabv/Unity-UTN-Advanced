@@ -198,6 +198,7 @@ MonoBehaviour:
   WalkAnimationParameterName: Walk
   FireAnimationParameterName: Fire
   AimAnimationParameterName: Aim
+  IdleAnimationParameterName: Idle
   PlayerAnimator: {fileID: 6842735064886895477}
 --- !u!114 &8941280478871486953
 MonoBehaviour:
@@ -211,6 +212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e541a34e42ec4fa5ab15083bda1d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LookCamera: {fileID: 7214953967250953838}
+  CurrentWeaponRange: 100
+  CurrentWeaponFireRate: 0.1
+  CurrentWeaponDamage: 10
+  ShootableLayerMasks:
+    serializedVersion: 2
+    m_Bits: 257
   FirePrimaryButtonName: Fire1
   AimButtonName: Fire2
 --- !u!82 &5619001224213197761

@@ -109,7 +109,9 @@ GameObject:
   - component: {fileID: 1112338010105595}
   - component: {fileID: 1112338010105596}
   - component: {fileID: 1112338010105598}
-  m_Layer: 0
+  - component: {fileID: 699151327255603773}
+  - component: {fileID: 4086298687069669518}
+  m_Layer: 8
   m_Name: SpaceMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,6 +325,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WalkAnimationParameterName: Walk
   EnemyAnimator: {fileID: 6323750623322942431}
+--- !u!136 &699151327255603773
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237577125869228563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4086298687069669518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237577125869228563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40da85cada49450e91d0cb43d7d6bcab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
+  ScoreManager: {fileID: 0}
 --- !u!1 &6237579758785766921
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerAnimatorController : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class PlayerAnimatorController : MonoBehaviour
     [SerializeField] private string WalkAnimationParameterName = "Walk";
     [SerializeField] private string FireAnimationParameterName = "Fire";
     [SerializeField] private string AimAnimationParameterName = "Aim";
+    [SerializeField] private string IdleAnimationParameterName = "Idle";
     
     [SerializeField] private Animator PlayerAnimator;
 #pragma warning restore 0649
@@ -31,5 +33,10 @@ public class PlayerAnimatorController : MonoBehaviour
     public void SetAimAnimation(bool isAiming)
     {
         PlayerAnimator.SetBool(AimAnimationParameterName, isAiming);
+    }
+
+    private void OnDisable()
+    {
+        PlayerAnimator.SetBool(IdleAnimationParameterName, true);
     }
 }

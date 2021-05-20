@@ -11,6 +11,7 @@ public class Vida : MonoBehaviour
 
     private bool toBeDestroy = false;
     private MeshRenderer[] MeshRenderers;
+    private SkinnedMeshRenderer[] SkinnedMeshRenderers;
     private ParticleSystem[] ParticleSystems;
     private bool dead = false;
     private Collider[] cachedColliders;
@@ -24,6 +25,7 @@ public class Vida : MonoBehaviour
         if(cachedDamageAudioSource == null)
             cachedDamageAudioSource = this.GetComponent<AudioSource>();
         MeshRenderers = this.GetComponentsInChildren<MeshRenderer>();
+        SkinnedMeshRenderers = this.GetComponentsInChildren<SkinnedMeshRenderer>();
         ParticleSystems = this.GetComponentsInChildren<ParticleSystem>();
 
         cachedColliders = this.GetComponentsInChildren<Collider>();
@@ -43,6 +45,7 @@ public class Vida : MonoBehaviour
     private IEnumerator DelayedDestroy()
     {
         DisableAllMeshRenderers();
+        DisableAllSkinnedMeshRenderers();
         StopAllParticleSystems();
         DisableAllColliders();
         yield return new WaitForSeconds(0.75f);
@@ -67,6 +70,17 @@ public class Vida : MonoBehaviour
             foreach (MeshRenderer meshRenderer in MeshRenderers)
             {
                 meshRenderer.enabled = false;
+            }
+        }
+    }
+    
+    private void DisableAllSkinnedMeshRenderers()
+    {
+        if (SkinnedMeshRenderers != null)
+        {
+            foreach (SkinnedMeshRenderer skinnedMeshRenderer in SkinnedMeshRenderers)
+            {
+                skinnedMeshRenderer.enabled = false;
             }
         }
     }

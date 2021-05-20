@@ -44,4 +44,9 @@ public class PlayerLook : MonoBehaviour
     {
         if (InvertVerticalLook) currentFrameVerticalAxisValue *= -1;
     }
+
+    private void OnDestroy()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
