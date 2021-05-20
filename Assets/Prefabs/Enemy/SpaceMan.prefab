@@ -1474,6 +1474,7 @@ GameObject:
   - component: {fileID: 1112338010105598}
   - component: {fileID: 699151327255603773}
   - component: {fileID: 4086298687069669518}
+  - component: {fileID: 5901383909005121010}
   m_Layer: 8
   m_Name: SpaceMan
   m_TagString: Untagged
@@ -1721,6 +1722,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   ScoreManager: {fileID: 0}
+--- !u!114 &5901383909005121010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237577125869228563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e889607ce42544c9b8793313f89320c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6237579758785766921
 GameObject:
   m_ObjectHideFlags: 0

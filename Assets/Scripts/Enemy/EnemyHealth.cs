@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(EnemyAnimationController))]
+[RequireComponent(typeof(EnemyMovement))]
 public class EnemyHealth : MonoBehaviour
 {
 #pragma warning disable 0649
@@ -12,11 +12,13 @@ public class EnemyHealth : MonoBehaviour
     private EnemyAnimationController EnemyAnimationController;
 
     private Transform cachedTransform;
+    private EnemyMovement cachedEnemyMovement;
 
     private void Awake()
     {
         EnemyAnimationController = this.GetComponent<EnemyAnimationController>();
         cachedTransform = this.GetComponent<Transform>();
+        cachedEnemyMovement = this.GetComponent<EnemyMovement>();
     }
 
     public void SetEnemyManager(EnemyManager enemyManager)
@@ -31,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     {
         EnemyManager?.EnemigoMurio();
         EnemyAnimationController.SetEnemyDead();
+        cachedEnemyMovement.StopLiving();
         
         if(DeadEffect != null)
         {

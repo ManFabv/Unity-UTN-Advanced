@@ -6,7 +6,8 @@ public class EnemyAnimationController : MonoBehaviour
     [SerializeField] private string WalkAnimationParameterName = "Walk";
     [SerializeField] private string IdleAnimationParameterName = "Idle";
     [SerializeField] private string DeathAnimationParameterName = "Death";
-    
+    [SerializeField] private string AttackAnimationParameterName = "Attack";
+
     [SerializeField] private Animator EnemyAnimator;
 #pragma warning restore 0649
 
@@ -23,5 +24,10 @@ public class EnemyAnimationController : MonoBehaviour
     public void SetEnemyDead()
     {
         EnemyAnimator.SetTrigger(DeathAnimationParameterName);
+    }
+
+    public void SetPlayerAttack(bool isTargetOnSight)
+    {
+        EnemyAnimator.SetBool(AttackAnimationParameterName, isTargetOnSight);
     }
 }
