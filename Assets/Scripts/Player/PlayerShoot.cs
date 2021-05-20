@@ -9,6 +9,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private float CurrentWeaponFireRate = 1.0f;
     [SerializeField] private int CurrentWeaponDamage = 10;
     [SerializeField] private LayerMask ShootableLayerMasks;
+    [SerializeField] private ParticleSystem MuzzleFlashParticleSystem;
     
     [SerializeField] private string FirePrimaryButtonName = "Fire1";
     [SerializeField] private string AimButtonName = "Fire2";
@@ -41,11 +42,14 @@ public class PlayerShoot : MonoBehaviour
     private void ProcessShoot()
     {
         weaponFireRate -= Time.deltaTime;
+
+        if (!isFiring)
+            MuzzleFlashParticleSystem.Stop();
         
         if (weaponFireRate < 0 && isFiring)
         {
             weaponFireRate = CurrentWeaponFireRate;
-            
+            MuzzleFlashParticleSystem.Play();
             if(Physics.Raycast(cachedCameraTransform.position, cachedCameraTransform.forward, out RaycastHit hit, CurrentWeaponRange, ShootableLayerMasks))
             {
                 Vida otherObjectVida = hit.transform.GetComponent<Vida>();

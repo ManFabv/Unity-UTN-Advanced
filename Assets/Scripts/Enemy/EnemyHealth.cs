@@ -4,12 +4,19 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAnimationController))]
 public class EnemyHealth : MonoBehaviour
 {
+#pragma warning disable 0649
+    [SerializeField] private GameObject DeadEffect;
+#pragma warning restore 0649
+
     private EnemyManager EnemyManager;
     private EnemyAnimationController EnemyAnimationController;
+
+    private Transform cachedTransform;
 
     private void Awake()
     {
         EnemyAnimationController = this.GetComponent<EnemyAnimationController>();
+        cachedTransform = this.GetComponent<Transform>();
     }
 
     public void SetEnemyManager(EnemyManager enemyManager)
@@ -24,5 +31,10 @@ public class EnemyHealth : MonoBehaviour
     {
         EnemyManager?.EnemigoMurio();
         EnemyAnimationController.SetEnemyDead();
+        
+        if(DeadEffect != null)
+        {
+            Instantiate(DeadEffect, cachedTransform.position, cachedTransform.rotation);
+        }
     }
 }
