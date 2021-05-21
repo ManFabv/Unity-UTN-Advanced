@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5619001224213197761}
   - component: {fileID: 267356993878038813}
   - component: {fileID: 8333441385764390470}
+  - component: {fileID: 222213249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -199,7 +200,7 @@ MonoBehaviour:
   FireAnimationParameterName: Fire
   AimAnimationParameterName: Aim
   IdleAnimationParameterName: Idle
-  DeatheAnimationParameterName: Death
+  DeathAnimationParameterName: Death
   PlayerAnimator: {fileID: 6842735064886895477}
 --- !u!114 &8941280478871486953
 MonoBehaviour:
@@ -378,6 +379,20 @@ MonoBehaviour:
     m_Mode: 1
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
+--- !u!136 &222213249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214953967266689202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5891235102298418189
 PrefabInstance:
   m_ObjectHideFlags: 0

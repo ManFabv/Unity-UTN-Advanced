@@ -104,8 +104,6 @@ public class Vida : MonoBehaviour
 
     public void Dañar(int daño)
     {
-        if(this.CompareTag("Player"))
-            Debug.LogError("cachedDamageAudioSource == null : " + (cachedDamageAudioSource == null));
         vida -= daño;
 
         cachedDamageAudioSource?.Play();

@@ -49,4 +49,9 @@ public class PlayerLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
+    
+    public void Murio()
+    {
+        PlayerLookCameraTransform.SetParent(null);
+    }
 }

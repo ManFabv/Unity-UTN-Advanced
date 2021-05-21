@@ -9,6 +9,8 @@ public class GeneradorOleadas : MonoBehaviour
     [SerializeField] private int VidaEnemigos = 30;
     [SerializeField] private EnemyManager EnemyManager;
     [SerializeField] private ScoreManager ScoreManager;
+
+    [SerializeField] private Transform spawnPoint;
 #pragma warning restore 0649
 
     private Transform cachedTransform;
@@ -37,7 +39,7 @@ public class GeneradorOleadas : MonoBehaviour
     {
         if (Prefab != null)
         {
-            GameObject go = Instantiate(Prefab, cachedTransform.position, cachedTransform.rotation);
+            GameObject go = Instantiate(Prefab, spawnPoint.position, cachedTransform.rotation);
             Vida vida = go.GetComponent<Vida>();
             ScoreOnDeath scoreOnDeath = go.GetComponent<ScoreOnDeath>();
 
