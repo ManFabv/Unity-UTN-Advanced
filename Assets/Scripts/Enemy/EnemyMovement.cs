@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private ParticleSystem MuzzleFlashParticleSystem;
     [SerializeField] private float EnemyAttackRange = 110;
     [SerializeField] private GameObject Bullet;
+    [SerializeField] private Transform ShootSpawnPoint;
     
     [SerializeField] private string PlayerTagName = "Player";
 #pragma warning restore 0649
@@ -108,7 +109,12 @@ public class EnemyMovement : MonoBehaviour
 
             if (Bullet != null)
             {
-                GameObject ammoGO = Instantiate(Bullet, LookEyes.position, LookEyes.rotation);
+                if (ShootSpawnPoint == null)
+                    ShootSpawnPoint = LookEyes;
+                if (ShootSpawnPoint == null)
+                    ShootSpawnPoint = cachedEnemyTransform;
+                
+                GameObject ammoGO = Instantiate(Bullet, ShootSpawnPoint.position, ShootSpawnPoint.rotation);
                 Damage damageComponent = ammoGO.GetComponent<Damage>();
                 damageComponent?.TagToApplyDamage(PlayerTagName);
             }

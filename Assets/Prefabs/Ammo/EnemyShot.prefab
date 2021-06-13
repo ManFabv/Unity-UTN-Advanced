@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadX: 0
   velocidadY: 0
-  velocidadZ: 5
+  velocidadZ: 10
 --- !u!114 &2146054547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4428c39d8a9348d698c9452b5d62e196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToExplode: 5
+  TimeToExplode: 8
 --- !u!136 &8751539197982619292
 CapsuleCollider:
   m_ObjectHideFlags: 0

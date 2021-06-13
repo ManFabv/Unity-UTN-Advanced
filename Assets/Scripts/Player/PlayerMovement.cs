@@ -79,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckIfGrounded()
     {
-        isTouchingGround =  Physics.Raycast(cachedLocalTransform.position, Vector3.down, GroundDistanceCheck);
+        isTouchingGround =
+            cachedLocalCharacterController.isGrounded || Physics.Raycast(cachedLocalTransform.position, Vector3.down, GroundDistanceCheck);
     }
     
     private void CheckIfTouchingCeiling()
