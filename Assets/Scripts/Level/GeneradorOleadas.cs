@@ -3,9 +3,6 @@
 public class GeneradorOleadas : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private GameObject Prefab;
-    [SerializeField] private float TimeForFirstSpawnRate = 2;
-    [SerializeField] private float SpawnRate = 5;
     [SerializeField] private int VidaEnemigos = 30;
     [SerializeField] private EnemyManager EnemyManager;
     [SerializeField] private ScoreManager ScoreManager;
@@ -14,31 +11,34 @@ public class GeneradorOleadas : MonoBehaviour
 #pragma warning restore 0649
 
     private Transform cachedTransform;
+    private EnemyWave CurrentEnemyWave;
 
     private void Awake()
     {
         cachedTransform = this.GetComponent<Transform>();
 
-        FirstSpawn();
-
         if(EnemyManager == null)
             Debug.LogError("EL " + typeof(EnemyManager) + " ES NULO EN " + nameof(EnemyManager));
         if(ScoreManager == null)
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
-        if(Prefab == null)
-            Debug.LogError("NO SE ASIGNO UN OBJETO A LA PROPIEDAD " + nameof(Prefab));
     }
 
-    private void FirstSpawn()
+    public void SpawnNewWave(EnemyWave EnemyWave)
     {
-        Invoke("InstanciarObjeto", TimeForFirstSpawnRate);
-        InvokeRepeating("InstanciarObjeto", SpawnRate, SpawnRate);
+        if(EnemyWave != null)
+        {
+            CurrentEnemyWave = EnemyWave;
+            Invoke("InstanciarObjeto", CurrentEnemyWave.TimeForFirstSpawnRate);
+            InvokeRepeating("InstanciarObjeto", CurrentEnemyWave.TimeBetweenSpawns, CurrentEnemyWave.TimeBetweenSpawns);
+        }
     }
 
     private void InstanciarObjeto()
     {
-        if (Prefab != null)
+        if (CurrentEnemyWave != null && CurrentEnemyWave.EnemiesPrefab != null && CurrentEnemyWave.EnemiesPrefab.Length > 0)
         {
+            int prefabIndex = Random.Range(0, CurrentEnemyWave.EnemiesPrefab.Length);
+            GameObject Prefab = CurrentEnemyWave.EnemiesPrefab[prefabIndex];
             GameObject go = Instantiate(Prefab, spawnPoint.position, cachedTransform.rotation);
             Vida vida = go.GetComponent<Vida>();
             ScoreOnDeath scoreOnDeath = go.GetComponent<ScoreOnDeath>();
