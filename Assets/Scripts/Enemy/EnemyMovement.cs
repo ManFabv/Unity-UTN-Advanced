@@ -90,6 +90,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void AttackTarget()
     {
+        cachedNavMeshAgent.SetDestination(cachedEnemyTransform.position);
         Vector3 targetLook = targetTransform.position;
         targetLook.y = cachedEnemyTransform.position.y;
         cachedEnemyTransform.LookAt(targetLook, cachedEnemyTransform.up);
