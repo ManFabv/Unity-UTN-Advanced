@@ -53,7 +53,9 @@ public class PlayerShoot : MonoBehaviour
             if(Physics.Raycast(cachedCameraTransform.position, cachedCameraTransform.forward, out RaycastHit hit, CurrentWeaponRange, ShootableLayerMasks))
             {
                 Vida otherObjectVida = hit.transform.GetComponent<Vida>();
-                otherObjectVida?.Dañar(CurrentWeaponDamage);
+                //Prevent self shooting
+                if(!otherObjectVida.CompareTag(this.tag))
+                    otherObjectVida?.Dañar(CurrentWeaponDamage);
             }
         }
     }
