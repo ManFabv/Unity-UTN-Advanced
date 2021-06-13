@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 6237577125869228563, guid: 115cdc392e99c4216a3f7f03d6ba9c16, type: 3}
+  Prefab: {fileID: 8075489493237586565, guid: 297413b4ccdff4e2cbc1945885dba655, type: 3}
   TimeForFirstSpawnRate: 2
   SpawnRate: 15
   VidaEnemigos: 30
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 6237577125869228563, guid: 115cdc392e99c4216a3f7f03d6ba9c16, type: 3}
+  Prefab: {fileID: 8075489493237586565, guid: 297413b4ccdff4e2cbc1945885dba655, type: 3}
   TimeForFirstSpawnRate: 5
   SpawnRate: 10
   VidaEnemigos: 30
