@@ -23,7 +23,8 @@ public class Damage : MonoBehaviour
         if (vida != null && other.gameObject.CompareTag(tagToApplyDamage))
         {
             vida.Dañar(Daño);
-            Destroy(this.gameObject);
         }
+        
+        Destroy(this.gameObject);
     }
 }

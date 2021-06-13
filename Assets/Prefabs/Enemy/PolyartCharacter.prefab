@@ -336,7 +336,7 @@ MonoBehaviour:
   LookEyes: {fileID: 8650794106177503552}
   CurrentWeaponFireRate: 0.35
   MuzzleFlashParticleSystem: {fileID: 4781974730420433989}
-  EnemyAttackRange: 50
+  EnemyAttackRange: 30
   Bullet: {fileID: 6003941285954181356, guid: 58c939be04256466ea0bfcd8202a5982, type: 3}
   ShootSpawnPoint: {fileID: 6725616243996349965}
   PlayerTagName: Player
