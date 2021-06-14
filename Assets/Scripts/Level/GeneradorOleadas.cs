@@ -6,6 +6,7 @@ public class GeneradorOleadas : MonoBehaviour
     [SerializeField] private int VidaEnemigos = 30;
     [SerializeField] private EnemyManager EnemyManager;
     [SerializeField] private ScoreManager ScoreManager;
+    [SerializeField] private GameLevelManager GameLevelManager;
 
     [SerializeField] private Transform spawnPoint;
 #pragma warning restore 0649
@@ -23,13 +24,12 @@ public class GeneradorOleadas : MonoBehaviour
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
     }
 
-    public void SpawnNewWave(EnemyWave EnemyWave)
+    public void SpawnNewWaveEnemies(EnemyWave EnemyWave)
     {
         if(EnemyWave != null)
         {
             CurrentEnemyWave = EnemyWave;
-            Invoke("InstanciarObjeto", CurrentEnemyWave.TimeForFirstSpawnRate);
-            InvokeRepeating("InstanciarObjeto", CurrentEnemyWave.TimeBetweenSpawns, CurrentEnemyWave.TimeBetweenSpawns);
+            InvokeRepeating("InstanciarObjeto", CurrentEnemyWave.TimeForFirstSpawnRate, CurrentEnemyWave.TimeBetweenSpawns);
         }
     }
 
@@ -37,17 +37,26 @@ public class GeneradorOleadas : MonoBehaviour
     {
         if (CurrentEnemyWave != null && CurrentEnemyWave.EnemiesPrefab != null && CurrentEnemyWave.EnemiesPrefab.Length > 0)
         {
-            int prefabIndex = Random.Range(0, CurrentEnemyWave.EnemiesPrefab.Length);
-            GameObject Prefab = CurrentEnemyWave.EnemiesPrefab[prefabIndex];
-            GameObject go = Instantiate(Prefab, spawnPoint.position, cachedTransform.rotation);
-            Vida vida = go.GetComponent<Vida>();
-            ScoreOnDeath scoreOnDeath = go.GetComponent<ScoreOnDeath>();
+            if(CurrentEnemyWave.CurrentlyNumOfSpawnedEnemies < CurrentEnemyWave.MaxNumberOfSpawnedEnemies)
+            {
+                CurrentEnemyWave.CurrentlyNumOfSpawnedEnemies++;
+                int prefabIndex = Random.Range(0, CurrentEnemyWave.EnemiesPrefab.Length);
+                GameObject Prefab = CurrentEnemyWave.EnemiesPrefab[prefabIndex];
+                GameObject go = Instantiate(Prefab, spawnPoint.position, cachedTransform.rotation);
+                Vida vida = go.GetComponent<Vida>();
+                ScoreOnDeath scoreOnDeath = go.GetComponent<ScoreOnDeath>();
 
-            if(vida != null)
-                vida.CambiarVida(VidaEnemigos);
+                if (vida != null)
+                    vida.CambiarVida(VidaEnemigos);
 
-            if(scoreOnDeath != null)
-                scoreOnDeath.SetScoreManager(ScoreManager);
+                if (scoreOnDeath != null)
+                    scoreOnDeath.SetScoreManager(ScoreManager);
+            }
+            else
+            {
+                CancelInvoke("InstanciarObjeto");
+                GameLevelManager.FinishedSpawningCurrentWave();
+            }
         }
     }
 

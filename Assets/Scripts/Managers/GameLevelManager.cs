@@ -1,12 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameLevelManager : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private int MaxScoreParaGanar = 10;
-    [SerializeField] private float TimeToLoseLevel = 10;
-    [SerializeField] private TimeManager TimeManager;
     [SerializeField] private ScoreManager ScoreManager;
     [SerializeField] private AudioManager AudioManager;
     [SerializeField] private string NextWinLevelName;
@@ -15,6 +13,9 @@ public class GameLevelManager : MonoBehaviour
     [SerializeField] private string LoseLevelName = "Perder";
     [SerializeField] private float TimeBeforeLoadNextLevel = 9;
     [SerializeField] private GameUI GameUI;
+    [SerializeField] private GeneradorOleadas[] GeneradorOleadas;
+    [SerializeField] private EnemyWave[] EnemyWaves;
+    [SerializeField] private float CooldownBetweenWaves = 10.0f;
 #pragma warning restore 0649
 
     private enum LevelEndState
@@ -27,6 +28,8 @@ public class GameLevelManager : MonoBehaviour
     private bool finishedLevel = false;
     private LevelEndState levelEndState = LevelEndState.PLAYING;
     private bool jugadorMurio = false;
+    private bool IsFinishedCurrentWave = true;
+    private int CurrentWaveIndex = -1;
 
     public void OnJugadorMurio()
     {
@@ -35,12 +38,27 @@ public class GameLevelManager : MonoBehaviour
 
     private void Awake()
     {
+
+        if (GeneradorOleadas == null)
+        {
+            Debug.LogError("EL " + typeof(GeneradorOleadas) + " ES NULO EN " + nameof(GeneradorOleadas));
+        }
+        else
+        {
+            if (EnemyWaves == null)
+            {
+                Debug.LogError("EL " + typeof(EnemyWave) + " ES NULO EN " + nameof(EnemyWaves));
+            }
+            else
+            {
+                StartCooldownBetweenWaves();
+                StartCoroutine(DelayedUIUpdate());
+            }
+        }
         if (GameUI == null)
             Debug.LogError("EL " + typeof(GameUI) + " ES NULO EN " + nameof(GameUI));
         if (ScoreManager == null)
             Debug.LogError("EL " + typeof(ScoreManager) + " ES NULO EN " + nameof(ScoreManager));
-        if (TimeManager == null)
-            Debug.LogError("EL " + typeof(TimeManager) + " ES NULO EN " + nameof(TimeManager));
         if (AudioManager == null)
             Debug.LogError("EL " + typeof(AudioManager) + " ES NULO EN " + nameof(AudioManager));
         if(string.IsNullOrEmpty(NextWinLevelName))
@@ -53,12 +71,18 @@ public class GameLevelManager : MonoBehaviour
             Debug.LogError("NO SE ESPECIFICO UN SIGUIENTE NIVEL EN " + nameof(LoseLevelName));
     }
 
+    private IEnumerator DelayedUIUpdate()
+    {
+        yield return new WaitForSeconds(TimeBeforeLoadNextLevel);
+        GameUI.UpdateWaveNumber(CurrentWaveIndex);
+    }
+
     private void Update()
     {
         if (finishedLevel == false)
         {
-            bool win = (ScoreManager != null && ScoreManager.Score >= MaxScoreParaGanar);
-            bool lose = (TimeManager != null && TimeManager.TimeElapsed >= TimeToLoseLevel) || jugadorMurio;
+            bool win = CurrentWaveIndex >= EnemyWaves.Length;
+            bool lose = jugadorMurio;
 
             if (win || lose)
             {
@@ -91,6 +115,21 @@ public class GameLevelManager : MonoBehaviour
         DisableObjectsOfType<PlayerShoot>();
         DisableObjectsOfType<EnemyMovement>();
         DisableObjectsOfType<EnemyAnimationController>();
+        DisableObjectsOfType<Damage>();
+        DisableObjectsOfType<MovimientoContinuo>();
+        StopAllParticleSystems();
+    }
+
+    private void StopAllParticleSystems()
+    {
+        ParticleSystem[] entidades = GameObject.FindObjectsOfType<ParticleSystem>();
+        if (entidades != null)
+        {
+            foreach (ParticleSystem entidad in entidades)
+            {
+                entidad.Stop();
+            }
+        }
     }
 
     private void DisableObjectsOfType<T>() where T : MonoBehaviour
@@ -129,5 +168,54 @@ public class GameLevelManager : MonoBehaviour
     {
         finishedLevel = true;
         DisableAllAction();
+    }
+
+    public void StartCooldownBetweenWaves()
+    {
+        IsFinishedCurrentWave = true;
+        CurrentWaveIndex++;
+        if (CurrentWaveIndex < EnemyWaves.Length)
+        {
+            if(CurrentWaveIndex > 0)
+                GameUI.ShowFinishedWaveText();
+            
+            Invoke("StartedCurrentSpawningWave", CooldownBetweenWaves);
+        }
+        else
+        {
+            CancelInvoke("StartedCurrentSpawningWave");
+        }
+    }
+
+    public void StartedCurrentSpawningWave()
+    {
+        if(!IsFinishedCurrentWave) return;
+        
+        IsFinishedCurrentWave = false;
+        
+        if(CurrentWaveIndex > 0)
+            GameUI.UpdateWaveNumber(CurrentWaveIndex);
+            
+        foreach (GeneradorOleadas generadorOleadas in GeneradorOleadas)
+        {
+            generadorOleadas.SpawnNewWaveEnemies(EnemyWaves[CurrentWaveIndex]);
+        }
+    }
+    
+    public void FinishedSpawningCurrentWave()
+    {
+        if(IsFinishedCurrentWave) return;
+        
+        IsFinishedCurrentWave = true;
+    }
+
+    public int TotalSpawnedEnemiesSoFar()
+    {
+        int totalSpawnedEnemiesSoFar = 0;
+        for (int i = 0; i <= CurrentWaveIndex && i < EnemyWaves.Length; i++)
+        {
+            totalSpawnedEnemiesSoFar += EnemyWaves[i].MaxNumberOfSpawnedEnemies;
+        }
+        return totalSpawnedEnemiesSoFar;
     }
 }

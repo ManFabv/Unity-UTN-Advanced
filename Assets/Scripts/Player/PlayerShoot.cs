@@ -54,8 +54,8 @@ public class PlayerShoot : MonoBehaviour
             {
                 Vida otherObjectVida = hit.transform.GetComponent<Vida>();
                 //Prevent self shooting
-                if(!otherObjectVida.CompareTag(this.tag))
-                    otherObjectVida?.Dañar(CurrentWeaponDamage);
+                if(otherObjectVida != null && !otherObjectVida.CompareTag(this.tag))
+                    otherObjectVida.Dañar(CurrentWeaponDamage);
             }
         }
     }

@@ -104,12 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 8075489493237586565, guid: 297413b4ccdff4e2cbc1945885dba655, type: 3}
-  TimeForFirstSpawnRate: 2
-  SpawnRate: 15
   VidaEnemigos: 30
   EnemyManager: {fileID: 0}
   ScoreManager: {fileID: 0}
+  GameLevelManager: {fileID: 0}
   spawnPoint: {fileID: 5964517920889685162}
 --- !u!114 &7947539832874468957
 MonoBehaviour:
@@ -123,12 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 8075489493237586565, guid: 297413b4ccdff4e2cbc1945885dba655, type: 3}
-  TimeForFirstSpawnRate: 5
-  SpawnRate: 10
   VidaEnemigos: 30
   EnemyManager: {fileID: 0}
   ScoreManager: {fileID: 0}
+  GameLevelManager: {fileID: 0}
   spawnPoint: {fileID: 6936328642458237352}
 --- !u!1001 &6770439665823300673
 PrefabInstance:

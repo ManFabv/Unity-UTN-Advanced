@@ -139,6 +139,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4e7701db9d4b91a262deb540df59fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &113608701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7947539832874468957, guid: ef46c042d7af14de38f0b2f679f66511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7703259622213845715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &149622069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8306215078921038152, guid: ef46c042d7af14de38f0b2f679f66511,
+    type: 3}
+  m_PrefabInstance: {fileID: 7703259622213845715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &375311953 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4408318203426433135, guid: 2745ddb9d4e074ae99203068d6036296,
@@ -543,6 +567,16 @@ PrefabInstance:
       propertyPath: GameUI
       value: 
       objectReference: {fileID: 1249507691}
+    - target: {fileID: 7363085007514546250, guid: 69c9948595fe94ea19941d9a215137bf,
+        type: 3}
+      propertyPath: GeneradorOleadas.Array.data[0]
+      value: 
+      objectReference: {fileID: 149622069}
+    - target: {fileID: 7363085007514546250, guid: 69c9948595fe94ea19941d9a215137bf,
+        type: 3}
+      propertyPath: GeneradorOleadas.Array.data[1]
+      value: 
+      objectReference: {fileID: 113608701}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c9948595fe94ea19941d9a215137bf, type: 3}
 --- !u!1001 &7214953968126230484
@@ -751,6 +785,11 @@ PrefabInstance:
       propertyPath: ScoreManager
       value: 
       objectReference: {fileID: 86394438}
+    - target: {fileID: 7947539832874468957, guid: ef46c042d7af14de38f0b2f679f66511,
+        type: 3}
+      propertyPath: GameLevelManager
+      value: 
+      objectReference: {fileID: 1156196887}
     - target: {fileID: 8055636649049434113, guid: ef46c042d7af14de38f0b2f679f66511,
         type: 3}
       propertyPath: m_Controller
@@ -806,6 +845,11 @@ PrefabInstance:
       propertyPath: ScoreManager
       value: 
       objectReference: {fileID: 86394438}
+    - target: {fileID: 8306215078921038152, guid: ef46c042d7af14de38f0b2f679f66511,
+        type: 3}
+      propertyPath: GameLevelManager
+      value: 
+      objectReference: {fileID: 1156196887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef46c042d7af14de38f0b2f679f66511, type: 3}
 --- !u!1001 &8958712019801243002

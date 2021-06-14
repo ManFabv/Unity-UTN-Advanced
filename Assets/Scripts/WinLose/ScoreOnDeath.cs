@@ -3,7 +3,6 @@
 public class ScoreOnDeath : MonoBehaviour
 {
 #pragma warning disable 0649
-    [SerializeField] private int score = 10;
     [SerializeField] private ScoreManager ScoreManager;
 #pragma warning restore 0649
 
@@ -17,6 +16,6 @@ public class ScoreOnDeath : MonoBehaviour
 
     public void Murio()
     {
-        ScoreManager?.SumarScore(score);
+        ScoreManager?.SumarScore();
     }
 }

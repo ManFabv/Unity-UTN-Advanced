@@ -8,4 +8,5 @@ public class EnemyWave
     public GameObject[] EnemiesPrefab;
     public float TimeBetweenSpawns = 5;
     public float TimeForFirstSpawnRate = 2;
+    [HideInInspector] public int CurrentlyNumOfSpawnedEnemies;
 }

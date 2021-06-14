@@ -12,10 +12,19 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameLevelManager GameManager;
     [SerializeField] private TMP_Text WinText;
     [SerializeField] private TMP_Text LoseText;
+    [SerializeField] private TMP_Text CurrentWaveNumber;
+    [SerializeField] private TMP_Text NextWaveText;
+    [SerializeField] private TMP_Text StartWaveText;
 #pragma warning restore 0649
     
     private void Awake()
     {
+        if(StartWaveText == null)
+            Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(StartWaveText));
+        if(NextWaveText == null)
+            Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(NextWaveText));
+        if(CurrentWaveNumber == null)
+            Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(CurrentWaveNumber));
         if(WinText == null)
             Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(WinText));
         if(LoseText == null)
@@ -61,5 +70,33 @@ public class GameUI : MonoBehaviour
             Debug.LogError("NOT SPECIFIED SCENE TO LOAD ON " + nameof(Menu_Level_Name));
         else
             SceneManager.LoadScene(Menu_Level_Name);
+    }
+
+    private void ShowStartWaveText()
+    {
+        StartWaveText.enabled = true;
+        Invoke("HideStartWaveText", SecondsToTransition);
+    }
+
+    private void HideStartWaveText()
+    {
+        StartWaveText.enabled = false;
+    }
+
+    public void ShowFinishedWaveText()
+    {
+        NextWaveText.enabled = true;
+        Invoke("HideFinishedWaveText", SecondsToTransition);
+    }
+    
+    private void HideFinishedWaveText()
+    {
+        NextWaveText.enabled = false;
+    }
+
+    public void UpdateWaveNumber(int waveNumber)
+    {
+        CurrentWaveNumber.text = (waveNumber+1).ToString();
+        ShowStartWaveText();
     }
 }
