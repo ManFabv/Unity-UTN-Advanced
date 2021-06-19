@@ -11,19 +11,16 @@ public class DestructorTemporizado : MonoBehaviour
 
     private void OnEnable()
     {
-    Debug.LogError("ENABLE");
         Invoke("Destruir", TimeToExplode);
     }
 
     private void OnDisable()
     {
-        Debug.LogError("DISABLE");
         CancelInvoke("Destruir");
     }
 
     private void Destruir()
     {
-    Debug.LogError("DESTRUIR");
         if(ReturnObjectToPoolInstead)
             ObjectPool?.ReturnObjectToPool(this.gameObject);
         else
