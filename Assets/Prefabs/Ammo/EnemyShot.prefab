@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToExplode: 8
+  ReturnObjectToPoolInstead: 1
 --- !u!136 &8751539197982619292
 CapsuleCollider:
   m_ObjectHideFlags: 0

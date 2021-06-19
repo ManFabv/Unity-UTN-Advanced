@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -14,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Transform ShootSpawnPoint;
     
     [SerializeField] private string PlayerTagName = "Player";
+    [SerializeField] private string PoolType = "EnemyShoot";
 #pragma warning restore 0649
 
     private NavMeshAgent cachedNavMeshAgent;
@@ -30,9 +33,18 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 lookDirection = Vector3.zero;
     
     private float weaponFireRate = 0;
+
+    private static ObjectPool _objectPool;
  
     private void Awake()
     {
+        if (_objectPool == null)
+        {
+            ObjectPool[] pools = GameObject.FindObjectsOfType<ObjectPool>();
+
+            if (pools != null && pools.Length > 0)
+                _objectPool = pools.First(pool => pool.PoolType.Equals(PoolType, StringComparison.InvariantCultureIgnoreCase));
+        }
         cachedNavMeshAgent = this.GetComponent<NavMeshAgent>();
         cachedAnimatorController = this.GetComponent<EnemyAnimationController>();
         cachedEnemyTransform = this.GetComponent<Transform>();
@@ -114,10 +126,15 @@ public class EnemyMovement : MonoBehaviour
                     ShootSpawnPoint = LookEyes;
                 if (ShootSpawnPoint == null)
                     ShootSpawnPoint = cachedEnemyTransform;
-                
-                GameObject ammoGO = Instantiate(Bullet, ShootSpawnPoint.position, ShootSpawnPoint.rotation);
+
+                GameObject ammoGO = _objectPool.GetObjectFromPool(ShootSpawnPoint);
                 Damage damageComponent = ammoGO.GetComponent<Damage>();
                 damageComponent?.TagToApplyDamage(PlayerTagName);
+                DestructorTemporizado destructorComponent = ammoGO.GetComponent<DestructorTemporizado>();
+                if(destructorComponent != null)
+                {
+                    destructorComponent.ObjectPool = _objectPool;
+                }
             }
         }
         else
