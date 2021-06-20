@@ -56,6 +56,9 @@ public class PlayerShoot : MonoBehaviour
                 //Prevent self shooting
                 if(otherObjectVida != null && !otherObjectVida.CompareTag(this.tag))
                     otherObjectVida.Dañar(CurrentWeaponDamage);
+
+                HitParticleSystem hitParticleSystem = hit.transform.GetComponent<HitParticleSystem>();
+                hitParticleSystem?.InstantiateHitParticles(hit);
             }
         }
     }

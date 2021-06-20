@@ -27,6 +27,9 @@ public class Damage : MonoBehaviour
 
         Castle castle = other.gameObject.GetComponent<Castle>();
         castle?.Dañar(Daño);
+        
+        HitParticleSystem hitParticleSystem = other.transform.GetComponent<HitParticleSystem>();
+        hitParticleSystem?.InstantiateHitParticles(other);
 
         DestructorTemporizado destructorTemporizado = other.gameObject.GetComponent<DestructorTemporizado>();
 
