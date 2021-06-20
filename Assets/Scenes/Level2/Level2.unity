@@ -2315,6 +2315,11 @@ PrefabInstance:
       propertyPath: NextWinLevelName
       value: WinGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7363085007514546250, guid: 69c9948595fe94ea19941d9a215137bf,
+        type: 3}
+      propertyPath: NextLoseLevelName
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c9948595fe94ea19941d9a215137bf, type: 3}
 --- !u!1001 &7214953968126230484

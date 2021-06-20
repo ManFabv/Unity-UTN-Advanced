@@ -592,6 +592,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4675903809151388696, guid: efe9934dbcd564f70bb834513b32f77e,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675903809151388696, guid: efe9934dbcd564f70bb834513b32f77e,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675903809151388696, guid: efe9934dbcd564f70bb834513b32f77e,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675903809151388696, guid: efe9934dbcd564f70bb834513b32f77e,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe9934dbcd564f70bb834513b32f77e, type: 3}
 --- !u!1001 &6929070693203678007
@@ -685,6 +705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NextWinLevelName
       value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7363085007514546250, guid: 69c9948595fe94ea19941d9a215137bf,
+        type: 3}
+      propertyPath: WinLevelName
+      value: WinLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c9948595fe94ea19941d9a215137bf, type: 3}

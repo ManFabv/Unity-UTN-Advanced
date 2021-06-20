@@ -53,6 +53,14 @@ public class WinLoseMenu : MonoBehaviour
         Invoke("LoadScene", SecondsToTransition);
     }
     
+    public void PlayNextClicked()
+    {
+        TransitionToMuteSnapshot();
+        FadeOutLoaderScreen();
+        sceneToLoad = LevelManager.NextLevel;
+        Invoke("LoadScene", SecondsToTransition);
+    }
+    
     public void MenuClicked()
     {
         TransitionToMuteSnapshot();
