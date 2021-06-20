@@ -535,6 +535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assault_Rifle_Arms
       objectReference: {fileID: 0}
+    - target: {fileID: 3127138579781825752, guid: 7a68400afa9ed42b5885eb120a1414fc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3127410562569524582, guid: 7a68400afa9ed42b5885eb120a1414fc,
         type: 3}
       propertyPath: m_IsActive
