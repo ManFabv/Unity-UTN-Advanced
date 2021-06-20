@@ -681,6 +681,11 @@ PrefabInstance:
       propertyPath: GeneradorOleadas.Array.data[1]
       value: 
       objectReference: {fileID: 113608701}
+    - target: {fileID: 7363085007514546250, guid: 69c9948595fe94ea19941d9a215137bf,
+        type: 3}
+      propertyPath: NextWinLevelName
+      value: Level2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c9948595fe94ea19941d9a215137bf, type: 3}
 --- !u!1001 &7214953968126230484
@@ -690,6 +695,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6681484167030892581, guid: 83c63da85ffd2485ebccad2e934ba5a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7214953967266689202, guid: 83c63da85ffd2485ebccad2e934ba5a5,
         type: 3}
       propertyPath: m_Name
