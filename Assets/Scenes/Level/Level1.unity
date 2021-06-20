@@ -386,6 +386,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adc5e815d9a7294981e582a554ea1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1844765101 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6893646558850480335, guid: 83c63da85ffd2485ebccad2e934ba5a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7214953968126230484}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1844765102 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6912692586242758091, guid: 83c63da85ffd2485ebccad2e934ba5a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7214953968126230484}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4260409896383049387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,6 +405,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475717542463414182, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1844765102}
     - target: {fileID: 2993382234731478277, guid: a2d5086d3ae804d72b546df10b5d5f59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -452,6 +469,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625082966689838077, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: targetCamera
+      value: 
+      objectReference: {fileID: 1844765101}
+    - target: {fileID: 6496795121654111127, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496795121654111127, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496795121654111127, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969055602275216819, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969055602275216819, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d5086d3ae804d72b546df10b5d5f59, type: 3}
