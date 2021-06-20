@@ -25,8 +25,11 @@ public class Damage : MonoBehaviour
             vida.Dañar(Daño);
         }
 
+        Castle castle = other.gameObject.GetComponent<Castle>();
+        castle?.Dañar(Daño);
+
         DestructorTemporizado destructorTemporizado = other.gameObject.GetComponent<DestructorTemporizado>();
-        
+
         if(destructorTemporizado != null)
             destructorTemporizado.Destruir();
         else

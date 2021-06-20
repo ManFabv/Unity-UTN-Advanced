@@ -29,6 +29,7 @@ public class GameLevelManager : MonoBehaviour
     private bool finishedLevel = false;
     private LevelEndState levelEndState = LevelEndState.PLAYING;
     private bool jugadorMurio = false;
+    private bool castleDestroyed = false;
     private bool IsFinishedCurrentWave = true;
     private int CurrentWaveIndex = -1;
 
@@ -37,9 +38,13 @@ public class GameLevelManager : MonoBehaviour
         jugadorMurio = true;
     }
 
+    public void OnCastleDestroyed()
+    {
+        castleDestroyed = true;
+    }
+
     private void Awake()
     {
-
         if (GeneradorOleadas == null)
         {
             Debug.LogError("EL " + typeof(GeneradorOleadas) + " ES NULO EN " + nameof(GeneradorOleadas));
@@ -83,7 +88,7 @@ public class GameLevelManager : MonoBehaviour
         if (finishedLevel == false)
         {
             bool win = CurrentWaveIndex >= EnemyWaves.Length;
-            bool lose = jugadorMurio;
+            bool lose = jugadorMurio || castleDestroyed;
 
             if (win || lose)
             {

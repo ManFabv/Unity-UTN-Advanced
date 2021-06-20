@@ -151,6 +151,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beddef81f9f4a82a838757d4754d967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &138919871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 267356993878038813, guid: 83c63da85ffd2485ebccad2e934ba5a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7214953968126230484}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7602d7ca3b44b54a84d418b7c5480aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &149622069 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8306215078921038152, guid: ef46c042d7af14de38f0b2f679f66511,
@@ -500,6 +512,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9085813863660670425, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1156196887}
+    - target: {fileID: 9085813863660670425, guid: a2d5086d3ae804d72b546df10b5d5f59,
+        type: 3}
+      propertyPath: playerVida
+      value: 
+      objectReference: {fileID: 138919871}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d5086d3ae804d72b546df10b5d5f59, type: 3}
 --- !u!1001 &6929070693203678007
