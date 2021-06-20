@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2310772}
   - component: {fileID: 1233704846043336874}
   - component: {fileID: 9133353497131846423}
+  - component: {fileID: -328330057587203684}
   m_Layer: 0
   m_Name: sptp_fire_hydrant_01
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39770502, y: 0.72055, z: 0.40986902}
   m_Center: {x: 0.0345285, y: 0.360275, z: 0.0000004991889}
+--- !u!114 &-328330057587203684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94f132d5d2478c90879b2498dd0681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedParticleSystem: {fileID: 0}

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9570716}
   - component: {fileID: 7435525880933324531}
   - component: {fileID: -3206817700460966612}
+  - component: {fileID: -4868522669009196309}
   m_Layer: 0
   m_Name: sptp_air_conditioning_04
   m_TagString: Untagged
@@ -131,6 +132,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0231099, y: 0.747834, z: 1.2708}
   m_Center: {x: -0.013873026, y: 0.373917, z: 0}
+--- !u!114 &-4868522669009196309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94f132d5d2478c90879b2498dd0681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedParticleSystem: {fileID: 0}
 --- !u!1 &161366
 GameObject:
   m_ObjectHideFlags: 0

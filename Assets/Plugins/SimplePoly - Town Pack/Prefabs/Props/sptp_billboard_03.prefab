@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2320592}
   - component: {fileID: 1361960716726561457}
   - component: {fileID: 7079011135433323434}
+  - component: {fileID: 4772732852071277627}
   m_Layer: 0
   m_Name: sptp_billboard_03
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5890375, y: 4.9060044, z: 6.9265122}
   m_Center: {x: 0.5193545, y: 2.4529989, z: 0}
+--- !u!114 &4772732852071277627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94f132d5d2478c90879b2498dd0681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedParticleSystem: {fileID: 0}

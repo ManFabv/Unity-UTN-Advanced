@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2324874}
   - component: {fileID: 7146883895708107292}
   - component: {fileID: 4731173560228654917}
+  - component: {fileID: -9096954048565220841}
   m_Layer: 0
   m_Name: sptp_electrical_panel_02
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39506596, y: 2.308745, z: 1.355162}
   m_Center: {x: 0.035023995, y: 1.1543725, z: -0.000000059604645}
+--- !u!114 &-9096954048565220841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94f132d5d2478c90879b2498dd0681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedParticleSystem: {fileID: 0}

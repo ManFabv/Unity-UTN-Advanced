@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3319666}
   - component: {fileID: 2318490}
   - component: {fileID: 8023737284841286392}
+  - component: {fileID: -2930171065921821502}
   m_Layer: 0
   m_Name: sptp_road_segment_10
   m_TagString: Untagged
@@ -93,3 +94,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.9999995, y: 0.12771699, z: 7}
   m_Center: {x: -3.9999902, y: 0.06385398, z: 3.5}
+--- !u!114 &-2930171065921821502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94f132d5d2478c90879b2498dd0681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedParticleSystem: {fileID: 0}
