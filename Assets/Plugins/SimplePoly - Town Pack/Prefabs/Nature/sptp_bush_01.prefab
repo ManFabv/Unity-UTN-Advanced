@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 434884}
   - component: {fileID: 3399678}
   - component: {fileID: 2379944}
-  - component: {fileID: 6431632}
+  - component: {fileID: -2659610627124352806}
   m_Layer: 0
   m_Name: sptp_bush_01
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6431632
-MeshCollider:
+--- !u!135 &-2659610627124352806
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +90,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6980ea277fb024a4ea8540084d1a6445, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.44202277
+  m_Center: {x: 0.033342898, y: 0.3786285, z: 0.005995095}

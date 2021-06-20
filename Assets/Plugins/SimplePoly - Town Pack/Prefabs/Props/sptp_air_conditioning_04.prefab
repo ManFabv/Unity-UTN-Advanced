@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3392520}
   - component: {fileID: 2308756}
   - component: {fileID: 9570716}
-  - component: {fileID: 6465552}
+  - component: {fileID: 7435525880933324531}
+  - component: {fileID: -3206817700460966612}
   m_Layer: 0
   m_Name: sptp_air_conditioning_04
   m_TagString: Untagged
@@ -101,8 +102,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!64 &6465552
-MeshCollider:
+--- !u!208 &7435525880933324531
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117942}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.512, y: 0.374, z: 0.63500005}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.014, y: 0.374, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &-3206817700460966612
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -111,10 +128,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: ba0a45d3aaf0a81499a99a90eca1ef66, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0231099, y: 0.747834, z: 1.2708}
+  m_Center: {x: -0.013873026, y: 0.373917, z: 0}
 --- !u!1 &161366
 GameObject:
   m_ObjectHideFlags: 0

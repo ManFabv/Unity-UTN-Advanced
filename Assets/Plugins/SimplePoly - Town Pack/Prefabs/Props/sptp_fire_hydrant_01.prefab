@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 489846}
   - component: {fileID: 3370624}
   - component: {fileID: 2310772}
-  - component: {fileID: 6438158}
+  - component: {fileID: 1233704846043336874}
+  - component: {fileID: 9133353497131846423}
   m_Layer: 0
   m_Name: sptp_fire_hydrant_01
   m_TagString: Untagged
@@ -80,8 +81,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6438158
-MeshCollider:
+--- !u!208 &1233704846043336874
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199176}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.19900002, y: 0.36, z: 0.20500001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.035, y: 0.36, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &9133353497131846423
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +107,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: b5cc2844dd57c3344b4840ed177ba8ec, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.39770502, y: 0.72055, z: 0.40986902}
+  m_Center: {x: 0.0345285, y: 0.360275, z: 0.0000004991889}

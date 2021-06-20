@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 484738}
   - component: {fileID: 3390738}
   - component: {fileID: 2382088}
-  - component: {fileID: 6450228}
+  - component: {fileID: -8513926587639794229}
   m_Layer: 0
   m_Name: sptp_road_segment_16
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6450228
-MeshCollider:
+--- !u!65 &-8513926587639794229
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +90,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 688fc85776e788145b660feb70e614cb, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 56.000004, y: 0.12771001, z: 33.00001}
+  m_Center: {x: 0.0000019073486, y: 0.063854516, z: -16.500002}
