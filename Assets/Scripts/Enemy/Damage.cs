@@ -24,7 +24,12 @@ public class Damage : MonoBehaviour
         {
             vida.Dañar(Daño);
         }
+
+        DestructorTemporizado destructorTemporizado = other.gameObject.GetComponent<DestructorTemporizado>();
         
-        Destroy(this.gameObject);
+        if(destructorTemporizado != null)
+            destructorTemporizado.Destruir();
+        else
+            Destroy(this.gameObject);
     }
 }

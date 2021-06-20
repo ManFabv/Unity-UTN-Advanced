@@ -393,41 +393,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2938840373853653465, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f4ceaf0efe7bdc42a298306d8eaca62, type: 2}
-    - target: {fileID: 2938992345803921183, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 638c801f7a2ec7540a80aced12b2e474, type: 2}
-    - target: {fileID: 2939042569515736563, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f4ceaf0efe7bdc42a298306d8eaca62, type: 2}
-    - target: {fileID: 2939103058026054807, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f4ceaf0efe7bdc42a298306d8eaca62, type: 2}
-    - target: {fileID: 2939332457280893305, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 638c801f7a2ec7540a80aced12b2e474, type: 2}
-    - target: {fileID: 2939383231472630167, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 638c801f7a2ec7540a80aced12b2e474, type: 2}
-    - target: {fileID: 2940347962850300621, guid: a2d5086d3ae804d72b546df10b5d5f59,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6f4ceaf0efe7bdc42a298306d8eaca62, type: 2}
     - target: {fileID: 2993382234731478277, guid: a2d5086d3ae804d72b546df10b5d5f59,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -586,11 +551,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6681484167030892581, guid: 83c63da85ffd2485ebccad2e934ba5a5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7214953967266689202, guid: 83c63da85ffd2485ebccad2e934ba5a5,
         type: 3}
       propertyPath: m_Name

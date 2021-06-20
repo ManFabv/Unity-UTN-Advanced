@@ -5,10 +5,12 @@ public class ScoreManager : MonoBehaviour
 {
 #pragma warning disable 0649
     [SerializeField] private TMP_Text UIScore;
-    [SerializeField] private int scoreDigitsAmount = 8;
+    [SerializeField] private int scoreDigitsAmount = 3;
     [SerializeField] private char scoreDigitsFill = '0';
     [SerializeField] private GameLevelManager GameLevelManager;
 #pragma warning restore 0649
+
+    private int uiScore = 0;
 
     private void Awake()
     {
@@ -17,7 +19,7 @@ public class ScoreManager : MonoBehaviour
         if (UIScore == null)
             Debug.LogError("EL " + typeof(TMP_Text) + " ES NULO EN " + nameof(UIScore));
         else
-            UpdateUIScore();
+            Invoke("UpdateUIScore", 1.0f);
     }
 
     public int Score { get; private set; } = 0;
@@ -25,21 +27,24 @@ public class ScoreManager : MonoBehaviour
     public void SumarScore()
     {
         Score++;
+        uiScore++;
         
         UpdateUIScore();
-
         CheckScoreForCurrentWave();
     }
 
-    private void UpdateUIScore()
+    public void UpdateUIScore()
     {
         if (UIScore != null)
-            UIScore.text = Score.ToString().PadLeft(scoreDigitsAmount, scoreDigitsFill);
+            UIScore.text = uiScore.ToString().PadLeft(scoreDigitsAmount, scoreDigitsFill) + " / " + GameLevelManager.CurrentWaveEnemies();
     }
 
     public void CheckScoreForCurrentWave()
     {
         if (Score >= GameLevelManager.TotalSpawnedEnemiesSoFar())
+        {
             GameLevelManager.StartCooldownBetweenWaves();
+            uiScore = 0;
+        }
     }
 }

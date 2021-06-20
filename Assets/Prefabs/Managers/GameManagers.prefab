@@ -509,6 +509,11 @@ PrefabInstance:
       propertyPath: GameLevelManager
       value: 
       objectReference: {fileID: 7363085007514546250}
+    - target: {fileID: 7945150967539009861, guid: d39e1e1f07b8b084b877e5678037ce52,
+        type: 3}
+      propertyPath: scoreDigitsAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8350241566729637992, guid: d39e1e1f07b8b084b877e5678037ce52,
         type: 3}
       propertyPath: m_Name

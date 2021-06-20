@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -194,7 +195,10 @@ public class GameLevelManager : MonoBehaviour
         IsFinishedCurrentWave = false;
         
         if(CurrentWaveIndex > 0)
+        {
             GameUI.UpdateWaveNumber(CurrentWaveIndex);
+            ScoreManager.UpdateUIScore();
+        }
             
         foreach (GeneradorOleadas generadorOleadas in GeneradorOleadas)
         {
@@ -217,5 +221,11 @@ public class GameLevelManager : MonoBehaviour
             totalSpawnedEnemiesSoFar += EnemyWaves[i].MaxNumberOfSpawnedEnemies;
         }
         return totalSpawnedEnemiesSoFar;
+    }
+
+    public int CurrentWaveEnemies()
+    {
+        int wave = Math.Min(EnemyWaves.Length - 1, CurrentWaveIndex);
+        return EnemyWaves[wave].MaxNumberOfSpawnedEnemies;
     }
 }

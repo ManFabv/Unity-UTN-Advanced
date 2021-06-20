@@ -19,7 +19,7 @@ public class DestructorTemporizado : MonoBehaviour
         CancelInvoke("Destruir");
     }
 
-    private void Destruir()
+    public void Destruir()
     {
         if(ReturnObjectToPoolInstead)
             ObjectPool?.ReturnObjectToPool(this.gameObject);
