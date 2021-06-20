@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 7031963187585163236}
   - component: {fileID: 6335724238156851772}
   - component: {fileID: 3963888606813878932}
-  - component: {fileID: 978441639449296632}
+  - component: {fileID: 4255486065399265096}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (1)
   m_TagString: Untagged
@@ -374,8 +374,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &978441639449296632
-MeshCollider:
+--- !u!65 &4255486065399265096
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -384,10 +384,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7.000001}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5000005}
 --- !u!1 &1181056377196402875
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +398,7 @@ GameObject:
   - component: {fileID: 1431462694451951019}
   - component: {fileID: 846736631719911993}
   - component: {fileID: 596391641676646087}
-  - component: {fileID: 5179010926452359191}
+  - component: {fileID: 4933924925852317940}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (4)
   m_TagString: Untagged
@@ -468,8 +467,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5179010926452359191
-MeshCollider:
+--- !u!65 &4933924925852317940
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -478,10 +477,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &1373563502969304853
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +491,7 @@ GameObject:
   - component: {fileID: 6030223468172163192}
   - component: {fileID: 1496899207699940852}
   - component: {fileID: 3262814221563151895}
-  - component: {fileID: 8129235128290253004}
+  - component: {fileID: 1826492762604617879}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (2)
   m_TagString: Untagged
@@ -562,8 +560,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8129235128290253004
-MeshCollider:
+--- !u!65 &1826492762604617879
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -572,10 +570,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &2328627209755785748
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +584,7 @@ GameObject:
   - component: {fileID: 682932833043183795}
   - component: {fileID: 3574354396521134495}
   - component: {fileID: 1351114455970600315}
-  - component: {fileID: 844628619924408872}
+  - component: {fileID: 1576650498960109833}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (11)
   m_TagString: Untagged
@@ -656,8 +653,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &844628619924408872
-MeshCollider:
+--- !u!65 &1576650498960109833
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -666,10 +663,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 6.9999995}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.4999998}
 --- !u!1 &2929804829790202503
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +677,7 @@ GameObject:
   - component: {fileID: 776647413819566285}
   - component: {fileID: 3366799413800115000}
   - component: {fileID: 2476266353299604774}
-  - component: {fileID: 126319867063224676}
+  - component: {fileID: 5423056831018194992}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (6)
   m_TagString: Untagged
@@ -750,8 +746,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &126319867063224676
-MeshCollider:
+--- !u!65 &5423056831018194992
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -760,10 +756,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &3485216880373043776
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +770,7 @@ GameObject:
   - component: {fileID: 7538514934508152712}
   - component: {fileID: 4180984059152831819}
   - component: {fileID: 8140839033184800}
-  - component: {fileID: 6816363722035632741}
+  - component: {fileID: 8710738803759060546}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (10)
   m_TagString: Untagged
@@ -844,8 +839,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6816363722035632741
-MeshCollider:
+--- !u!65 &8710738803759060546
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -854,10 +849,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &3764196592232854802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,7 +1786,7 @@ GameObject:
   - component: {fileID: 4158478373379389367}
   - component: {fileID: 2041233278075217805}
   - component: {fileID: 7913422060186590445}
-  - component: {fileID: 4949284413885151652}
+  - component: {fileID: 3127096674574770094}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (7)
   m_TagString: Untagged
@@ -1861,8 +1855,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4949284413885151652
-MeshCollider:
+--- !u!65 &3127096674574770094
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1871,10 +1865,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 7.9999995, y: 0.0000009999999, z: 7}
+  m_Center: {x: -3.9999998, y: 0.00000020577968, z: 3.5}
 --- !u!1 &4633862977186124459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1879,7 @@ GameObject:
   - component: {fileID: 5942436408723407151}
   - component: {fileID: 6699330828404611802}
   - component: {fileID: 4560363451168330586}
-  - component: {fileID: 4295727478945859394}
+  - component: {fileID: 1146049921891002134}
   m_Layer: 0
   m_Name: sptp_street_concrete_02
   m_TagString: Untagged
@@ -1955,8 +1948,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4295727478945859394
-MeshCollider:
+--- !u!65 &1146049921891002134
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1965,10 +1958,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7.000001}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5000005}
 --- !u!1 &4688236735541465248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,7 +1972,7 @@ GameObject:
   - component: {fileID: 563299258864487076}
   - component: {fileID: 4348578046682656842}
   - component: {fileID: 1740196627080285398}
-  - component: {fileID: 3665508026015101072}
+  - component: {fileID: 523723105654019767}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (5)
   m_TagString: Untagged
@@ -2049,8 +2041,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3665508026015101072
-MeshCollider:
+--- !u!65 &523723105654019767
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2059,10 +2051,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7.000001}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5000005}
 --- !u!1 &5101369434578628424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,7 +2065,7 @@ GameObject:
   - component: {fileID: 1079952332411708295}
   - component: {fileID: 3508914285154218434}
   - component: {fileID: 7055567978440794896}
-  - component: {fileID: 7084703324485105290}
+  - component: {fileID: 4949263943533820863}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (3)
   m_TagString: Untagged
@@ -2143,8 +2134,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7084703324485105290
-MeshCollider:
+--- !u!65 &4949263943533820863
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2153,10 +2144,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &5428000199804437215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2158,7 @@ GameObject:
   - component: {fileID: 8761895005680835291}
   - component: {fileID: 2798175086164324949}
   - component: {fileID: 7134124761759312085}
-  - component: {fileID: 2435073065215475451}
+  - component: {fileID: 6756375401889656305}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (8)
   m_TagString: Untagged
@@ -2237,8 +2227,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2435073065215475451
-MeshCollider:
+--- !u!65 &6756375401889656305
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2247,10 +2237,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1 &5745020959730994046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2416,7 @@ GameObject:
   - component: {fileID: 8983264644107379473}
   - component: {fileID: 5534332600416962473}
   - component: {fileID: 2849300379479097426}
-  - component: {fileID: 8242634975549711356}
+  - component: {fileID: 1214988410907448543}
   m_Layer: 0
   m_Name: sptp_street_concrete_02 (9)
   m_TagString: Untagged
@@ -2496,8 +2485,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &8242634975549711356
-MeshCollider:
+--- !u!65 &1214988410907448543
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2506,10 +2495,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6158d1a3191329a4c81f6f9e6c932e99, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8, y: 0.0000009999999, z: 7}
+  m_Center: {x: -4, y: 0.00000020577968, z: 3.5}
 --- !u!1001 &343039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22102,6 +22090,10 @@ PrefabInstance:
     - target: {fileID: 432000, guid: 4de73b6418e85f643bcd3c2edb0dfe0c, type: 3}
       propertyPath: m_RootOrder
       value: 224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470018, guid: 4de73b6418e85f643bcd3c2edb0dfe0c, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6253189797380246993, guid: 4de73b6418e85f643bcd3c2edb0dfe0c,
         type: 3}
